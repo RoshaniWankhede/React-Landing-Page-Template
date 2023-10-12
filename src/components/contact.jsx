@@ -1,6 +1,12 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
+import "../styles/home/contact.css";
+import {
+  FacebookOutlined,
+  TwitterCircleFilled,
+  YoutubeOutlined,
+} from "@ant-design/icons";
 
 const initialState = {
   name: "",
@@ -33,18 +39,23 @@ export const Contact = (props) => {
   };
   return (
     <div>
-      <div id="contact">
+      <div id="contact" className="contactMainContainer">
         <div className="container">
           <div className="col-md-8">
             <div className="row">
-              <div className="section-title">
+              <div className="section-title" data-aos="fade-up">
                 <h2>Get In Touch</h2>
-                <p>
+                <p style={{ margin: "30px 0" }}>
                   Please fill out the form below to send us an email and we will
                   get back to you as soon as possible.
                 </p>
               </div>
-              <form name="sentMessage" validate onSubmit={handleSubmit}>
+              <form
+                name="sentMessage"
+                validate
+                onSubmit={handleSubmit}
+                data-aos="fade-up"
+              >
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
@@ -88,65 +99,65 @@ export const Contact = (props) => {
                   <p className="help-block text-danger"></p>
                 </div>
                 <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
+                <button
+                  type="submit"
+                  className="btn btn-custom btn-lg"
+                  style={{ color: "#000" }}
+                >
                   Send Message
                 </button>
               </form>
             </div>
+            <div className="socialLinksContainer">
+              <div>
+                <FacebookOutlined className="socialIcon" />
+              </div>
+              <div>
+                <TwitterCircleFilled className="socialIcon" />
+              </div>
+              <div>
+                <YoutubeOutlined className="socialIcon" />
+              </div>
+            </div>
           </div>
+
           <div className="col-md-3 col-md-offset-1 contact-info">
-            <div className="contact-item">
+            <div className="contact-item" data-aos="fade-up">
+              <img
+                src="/assets/homepage/logo.svg"
+                alt="logo"
+                className="footerLogo"
+              />
               <h3>Contact Info</h3>
-              <p>
-                <span>
-                  <i className="fa fa-map-marker"></i> Address
-                </span>
-                {props.data ? props.data.address : "loading"}
+              <i className="fa fa-map-marker"></i> Address
+              <p style={{ marginTop: "10px" }}>
+                201, C Wing, Sadguru Colony No 3, Samrat Chowk, Datt mandir
+                Road, Wakad, Pune 411057 Maharashtra.
               </p>
             </div>
-            <div className="contact-item">
+            <div className="contact-item" data-aos="fade-up">
               <p>
                 <span>
                   <i className="fa fa-phone"></i> Phone
                 </span>{" "}
-                {props.data ? props.data.phone : "loading"}
+                +91 7507149084
               </p>
             </div>
-            <div className="contact-item">
+            <div className="contact-item" data-aos="fade-up">
               <p>
                 <span>
                   <i className="fa fa-envelope-o"></i> Email
                 </span>{" "}
-                {props.data ? props.data.email : "loading"}
+                - sales@cvit.in
               </p>
             </div>
           </div>
-          <div className="col-md-12">
-            <div className="row">
-              <div className="social">
-                <ul>
-                  <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
-                      <i className="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
-                      <i className="fa fa-youtube"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          {/* <div className="col-md-12"> */}
+
+          {/* </div>   */}
         </div>
       </div>
-      <div id="footer">
+      {/* <div id="footer">
         <div className="container text-center">
           <p>
             &copy; 2023 Issaaf Kattan React Land Page Template. Design by{" "}
@@ -155,7 +166,7 @@ export const Contact = (props) => {
             </a>
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

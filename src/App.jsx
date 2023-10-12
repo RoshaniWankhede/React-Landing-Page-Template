@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Navigation } from "./components/navigation";
-import { Header } from "./components/header";
-import { Features } from "./components/features";
-import { About } from "./components/about";
-import { Services } from "./components/services";
-import { Gallery } from "./components/gallery";
-import { Testimonials } from "./components/testimonials";
-import { Team } from "./components/Team";
-import { Contact } from "./components/contact";
-import JsonData from "./data/data.json";
+import React, { useEffect } from "react";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+import Home from "./components/home";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -18,23 +11,17 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 const App = () => {
-  const [landingPageData, setLandingPageData] = useState({});
-  useEffect(() => {
-    setLandingPageData(JsonData);
-  }, []);
+   useEffect(() => {
+     AOS.init({
+       duration: 1500,
+       once: false,
+     });
+   }, []);
 
   return (
-    <div>
-      {/* <Navigation /> */}
-      <Header data={landingPageData.Header} />
-      {/* <Features data={landingPageData.Features} />
-      <About data={landingPageData.About} />
-      <Services data={landingPageData.Services} />
-      <Gallery data={landingPageData.Gallery} />
-      <Testimonials data={landingPageData.Testimonials} />
-      <Team data={landingPageData.Team} />
-      <Contact data={landingPageData.Contact} /> */}
-    </div>
+    <>
+      <Home />
+    </>
   );
 };
 

@@ -1,0 +1,14 @@
+.aboutUsMainContainer{
+    background-color: #000000f4;
+    color: aliceblue;
+    background: linear-gradient(0deg, #000000f4, #000000f4);
+        /* radial-gradient(84.48% 217.82% at 12.4% 5.09%, #fff 0, #dfeaff 100%); */
+    padding: 100px 0;
+}
+.aboutUsSubHeadings:last-child{
+    margin: 30px 0;
+}
+.aboutUsPara{
+    font-weight: lighter;
+    color: #f8f8f8b7;
+}

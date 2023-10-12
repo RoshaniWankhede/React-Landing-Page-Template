@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/home/navigation.css'
 
 export const Navigation = (props) => {
   return (
@@ -18,7 +19,11 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            React Landing Page
+            <img
+              src="/assets/homepage/logo.svg"
+              className="headerLogo"
+              alt="logo"
+            />
           </a>{" "}
         </div>
 
@@ -38,25 +43,30 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
+              <a href="#about" className="page-scroll">
+                Solutions
+              </a>
+            </li>
+            <li>
               <a href="#services" className="page-scroll">
                 Services
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#portfolio" className="page-scroll">
                 Gallery
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="#testimonials" className="page-scroll">
                 Testimonials
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="#team" className="page-scroll">
                 Team
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="#contact" className="page-scroll">
                 Contact

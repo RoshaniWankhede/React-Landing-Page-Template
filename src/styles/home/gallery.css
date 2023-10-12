@@ -1,0 +1,60 @@
+.galleryMainContainer {
+    /* background-color: #000000f4; */
+    /* color: aliceblue; */
+    /* background: linear-gradient(0deg, #000000f4, #000000f4); */
+    /* radial-gradient(84.48% 217.82% at 12.4% 5.09%, #fff 0, #dfeaff 100%); */
+    padding: 100px 0;
+}
+
+.galleryImagesConatainer {
+    /* width: 83%; */
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 10px 5px; */
+    /* Adjust the gap as needed */
+    /* max-width: 100%; */
+    /* Ensure the gallery does not exceed the viewport width */
+    /* margin: 2% auto 10% auto; */
+    /* Center the gallery horizontally */
+
+    /* Set a fixed aspect ratio for the gallery container */
+    /* aspect-ratio: 1 / 1; */
+    /* 1:1 aspect ratio; adjust as needed */
+    aspect-ratio: 10/1;
+}
+.galleryImage{
+    height: 200px !important;
+}
+.mvaGridContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin: 50px;
+}
+.mvaImage{
+    width: 500px;
+    height: 450px;
+}
+.mvaPointsContainer{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+}
+.mvaPointsContainer>div{
+    margin-bottom: 10px;
+    /* border: 1px solid #fff; */
+    padding: 13px 10px;
+    border-left: 2px solid blue;
+    background-color: #e8eeee;
+    color: #000;
+    font-weight: bold;
+    font-size: 13px;
+
+}
+.nvaSubHeading{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 30px;
+}

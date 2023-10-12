@@ -1,39 +1,41 @@
 import React from "react";
+import '../styles/home/aboutUs.css'
 
 export const About = (props) => {
   return (
-    <div id="about">
+    <div id="about" className="aboutUsMainContainer">
       <div className="container">
-        <div className="row">
-          <div className="col-xs-12 col-md-6">
+        <h4 className="featuresHeading" data-aos="fade-up">
+          ABOUT US
+        </h4>
+        <div className="redBorderComponent" data-aos="fade-up">
+          <p></p>
+        </div>
+        <div className="row" style={{ marginTop: "70px" }}>
+          <div className="col-xs-12 col-md-6" data-aos="fade-right">
             {" "}
             <img src="img/about.jpg" className="img-responsive" alt="" />{" "}
           </div>
-          <div className="col-xs-12 col-md-6">
+          <div className="col-xs-12 col-md-6" data-aos="fade-left">
             <div className="about-text">
-              <h2>About Us</h2>
-              <p>{props.data ? props.data.paragraph : "loading..."}</p>
-              <h3>Why Choose Us?</h3>
-              <div className="list-style">
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    {props.data
-                      ? props.data.Why.map((d, i) => (
-                          <li key={`${d}-${i}`}>{d}</li>
-                        ))
-                      : "loading"}
-                  </ul>
-                </div>
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    {props.data
-                      ? props.data.Why2.map((d, i) => (
-                          <li key={`${d}-${i}`}> {d}</li>
-                        ))
-                      : "loading"}
-                  </ul>
-                </div>
-              </div>
+              <h3 className="aboutUsSubHeadings">About Us</h3>
+              <p className="aboutUsPara">
+                At CVIT Solution, we are dedicated to pushing the boundaries of
+                computer vision to address critical challenges across various
+                industries. We specialize in developing cutting-edge computer
+                vision applications that harnessing the power of Artificial
+                Intelligence, we enable businesses to automate tasks, gain
+                valuable insights from visual data, and create innovative
+                applications that were once considered impossible.
+              </p>
+              <h3 className="aboutUsSubHeadings">Our Vision</h3>
+              <p className="aboutUsPara">
+                Our vision is to be at the forefront of innovation, leveraging
+                the potential of computer vision to solve complex problems. We
+                believe that computer vision has the capacity to transform
+                industries and create safer, more efficient, and intelligent
+                systems.
+              </p>
             </div>
           </div>
         </div>

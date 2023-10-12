@@ -1,0 +1,20 @@
+.footerLogo{
+    width: 200px;
+}
+.contactMainContainer{
+    background-color: black;
+    color: antiquewhite;
+    padding: 100px;
+}
+.socialLinksContainer{
+    display: flex;
+    justify-content: left;
+    /* width: 30%; */
+    margin-top: 50px;
+    
+}
+.socialLinksContainer > div{
+    margin-right: 40px;
+}
+.socialLinksContainer .socialIcon{
+}
